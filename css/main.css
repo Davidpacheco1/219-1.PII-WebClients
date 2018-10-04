@@ -30,4 +30,13 @@
 }
 .title {
     font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+.description{
+    background-color: rgb(145, 157, 225);
+    height: 100%;
+}
+.description p{
+    color: #ffffff;
+    text-align: center;
 }
