@@ -1,6 +1,6 @@
 <?php
-require_once('Admin.php'); 
-require_once('Login.php'); 
+require_once('Objects/Admin.php'); 
+require_once('Objects/Login.php'); 
 $values = $_POST;
 $name = $values['name'];
 $password = $values['password'];

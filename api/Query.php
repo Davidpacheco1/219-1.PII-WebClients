@@ -1,5 +1,5 @@
 <?php
-require_once('Connection.php'); 
+require_once('Config/Connection.php'); 
 class Query{
     private $connection;
     function __construct(){
@@ -40,13 +40,15 @@ class Query{
 
     public function excecuteQuery($sql)
     {
-        var_dump($sql);
         $result = $this->connection->conn->query($sql);
-        var_dump($result);
         if ($result == true) {
-            return mysql_fetch_array($result, MYSQL_NUM);
+            $data = array();
+            while($row = $result->fetch_array(MYSQLI_NUM)) {
+                array_push($data,$row);
+              }
+            return $data ;
         } else {
-            return [];
+            return null;
         }
     }
 }
