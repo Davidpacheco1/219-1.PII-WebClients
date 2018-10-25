@@ -17,6 +17,17 @@ class Query{
         $sql = "SELECT ".$columnsNames." FROM $tableName ".$where;
         return $this->excecuteQuery($sql);
     }
+    public function update($tableName,$updateColumnsNames, $valueColumns,$whereColumnName, $whereValues){
+        $values = "";
+        for($i = 0; count($updateColumnsNames) > 0; $i++){
+            $values = $values. $updateColumnsNames[$i]." = ". $valueColumns[$i]. ",";
+        }
+        $values = substr($values, 0, -1);
+        $where = $this->getWhereString($whereColumnName, $whereValues);
+        $sql = "UPDATE $tableName SET ".$where;
+        return $this->excecuteQuery($sql);
+    }
+
     public function getWhereString($whereColumnName, $whereValues)
     {
         if(count($whereColumnName) == 0){
@@ -40,6 +51,7 @@ class Query{
 
     public function excecuteQuery($sql)
     {
+        var_dump($sql);
         $result = $this->connection->conn->query($sql);
         if ($result == true) {
             $data = array();
