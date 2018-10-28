@@ -25,29 +25,40 @@
         </nav>
     </header>
 
-    <div class="Contenido">
-    <div class="container">
-        <form action="/">
-            <label for="fname">Nombre</label>
-            <input type="text" id="fname" name="firstname" placeholder="Nombre">
-        
-            <label for="lname">Apellidos</label>
-            <input type="text" id="lname" name="lastname" placeholder="Apellido">
-        
-            <label for="country">Ciudades</label>
-            <select id="country" name="country">
-                <option value="australia">Guadalajara</option>
-                <option value="canada">San Luis</option>
-                <option value="usa">Colima</option>
-            </select>
-        
-            <label for="subject">Subject</label>
-            <textarea id="subject" name="subject" placeholder="Escribe tu necesidad y nosotros te proponemos una solución" style="height:200px"></textarea>
-        
-            <input type="submit" value="Submit">
+    <div class="contenido-contact">
+      
+      <div class="form_wrap">
+       
+       <section class="info-contact">
+           <section class="info-title">
+               <span class="fa fa-user-circle"></span>
+               <h2>Información<br>De Contacto</h2>
+           </section>
+           <section class="info_items">
+               <p><span class="fa fa-envelope"></span>desarrollo@responsive.com.mx</p>
+               <p><span class="fa fa-mobile"></span>33 10 06 20 27</p>
+           </section>
+       </section>
+       
+        <form action="/" class="form-contact" method="post">
+            <h2>Envia un mensaje</h2>
+            <div class="user_info">
+               
+                <label for="name">Nombre Completo *</label>
+                <input type="text" id="name" name="name" placeholder="Nombre Completo">
+                
+                <label for="email">Correo Electronico *</label>
+                <input type="email" id="email" name="email" placeholder="tucorreo@email.com">
+                
+                <label for="subject">Mensaje *</label>
+                <textarea id="subject" name="subject" placeholder="Escribe tu necesidad y nosotros te proponemos una solución"></textarea>
+                
+                <input type="button" value="Enviar Mensaje" id="submit">
+            </div>
         </form>
-    </div>
-    </div>
+        
+        </div>
+        
     </div>
 
     <footer>
@@ -60,28 +71,28 @@
                         <li>Home</li>
                     </a>
                 </div>
-                
+
                 <div>
                     <a href="/html/about.html">
                         <span id="nosotros" class="fas fa-users"></span>
                         <li>Nosotros</li>
                     </a>
                 </div>
-                
+
                 <div>
                     <a href="/html/services.html">
                         <span id="servicios" class="fas fa-cogs"></span>
                         <li>Servicios</li>
-                </a>
+                    </a>
                 </div>
-                
+
                 <div>
                     <a href="/html/contact.html">
                         <span id="desarrolladores" class="fas fa-code"></span>
                         <li>Desarrolladores</li>
-                </a>
+                    </a>
                 </div>
-                
+
             </ul>
         </div>
         <div class="contactanos">
@@ -106,28 +117,28 @@
                         <li>Youtube</li>
                     </a>
                 </div>
-                
+
                 <div>
                     <a href="https://es-la.facebook.com/" target="_blank">
                         <span id="facebook" class="fab fa-facebook-square"></span>
                         <li>Facebook</li>
                     </a>
                 </div>
-                
+
                 <div>
                     <a href="https://twitter.com/?lang=es" target="_blank">
                         <span id="twitter" class="fab fa-twitter-square"></span>
                         <li>Twitter</li>
-                </a>
+                    </a>
                 </div>
-                
+
                 <div>
                     <a href="https://www.instagram.com/?hl=es-la" target="_blank">
                         <span id="instagram" class="fab fa-instagram"></span>
                         <li>Instagram</li>
-                </a>
+                    </a>
                 </div>
-                
+
             </ul>
         </div>
     </footer>
