@@ -1,5 +1,5 @@
 <?php
-require_once('Query.php'); 
+require_once(realpath(dirname(__FILE__) . '/..') .'/Query.php'); 
 class Sections
 {
     public function Sections(){

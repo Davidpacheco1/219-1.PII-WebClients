@@ -8,44 +8,37 @@
 
     <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/estilos.css">
-    <link rel="stylesheet" href="/css/about.css">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/about.css">
 
 </head>
-
+<?php
+require_once('../api/Objects/Sections.php');
+$sections = new Sections();
+$values =  $sections->getSectionByLocation("about");
+?>
 <body>
 
     <header>
         <nav class="barra-menu">
-            <div><img src="/img/logo.png" alt="Logo"></div>
-            <span><a href="/index.html">Home</a></span>
-            <span><a href="/html/about.html">Nosotros</a></span>
-            <span><a href="/html/services.html">Servicios</a></span>
-            <span><a href="/html/contact.html">Contacto</a></span>
+            <div><img src="../img/logo.png" alt="Logo"></div>
+            <span><a href="../index.php">Home</a></span>
+            <span><a href="about.php">Nosotros</a></span>
+            <span><a href="services.php">Servicios</a></span>
+            <span><a href="contact.php">Contacto</a></span>
         </nav>
     </header>
 
     <div class="contenido-about">
         <div class="img">
-            <img src="/img/img-nosotros.jpg" alt="Imagen Home">
+            <img src="<?php echo $values[0]["img"]; ?>" alt="Imagen Home">
         </div>
         <div class="txt">
             <div class="titulo">
-                <h1>WebClients</h1>
+                <h1><?php echo $values[0]["title"]; ?></h1>
             </div>
             <div class="contenido">
-                <p>Somos una empresa vanguardista de desarrollo de software consolidada en el mercado, buscando siempre la satisfaccion de nuestros clientes en base a la calidad puesta en nuestros servicios.
-                </p><br>
-                <p>WebClients esta siempre en busca de la mejora continua capacitando a nuestros colaboradores, e implementando las tecnologías mas inovadoras existente en el mercado.</p><br>
-                <p>WebClients Cuenta con certificaciones en:</p><br>
-                <ul>
-                    <span class="far fa-arrow-alt-circle-right"></span><i>SCRUM</i>
-                    <span class="far fa-arrow-alt-circle-right"></span><i>Java Script</i>
-                    <span class="far fa-arrow-alt-circle-right"></span><i>CSS 3</i>
-                    <span class="far fa-arrow-alt-circle-right"></span><i>HTML 5</i>
-                    <span class="far fa-arrow-alt-circle-right"></span><i>PHP</i>
-                </ul>
-                <p id="ex">¡Desarrollamos tus ideas en sorprendentes Sitios Web!</p>
+                <?php echo $values[0]["description"]; ?>
             </div>
         </div>
     </div>
@@ -55,28 +48,28 @@
             <p>Conocenos</p>
             <ul>
                 <div>
-                    <a href="/index.html">
+                    <a href="/index.php">
                         <span id="home" class="fas fa-home"></span>
                         <li>Home</li>
                     </a>
                 </div>
 
                 <div>
-                    <a href="/html/about.html">
+                    <a href="/html/about.php">
                         <span id="nosotros" class="fas fa-users"></span>
                         <li>Nosotros</li>
                     </a>
                 </div>
 
                 <div>
-                    <a href="/html/services.html">
+                    <a href="/html/services.php">
                         <span id="servicios" class="fas fa-cogs"></span>
                         <li>Servicios</li>
                     </a>
                 </div>
 
                 <div>
-                    <a href="/html/contact.html">
+                    <a href="/html/contact.php">
                         <span id="desarrolladores" class="fas fa-code"></span>
                         <li>Desarrolladores</li>
                     </a>

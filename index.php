@@ -1,47 +1,42 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>WebClients</title>
-
+    <!--Librerias externas-->
     <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/estilos.css">
-    <link rel="stylesheet" href="/css/services.css">
+    <link rel="stylesheet" href="css/estilos.css">
 
 </head>
+<?php
+require_once('api/Objects/Sections.php');
+$sections = new Sections();
+$values =  $sections->getSectionByLocation("home");
+?>
+
 
 <body>
 
     <header>
+    
         <nav class="barra-menu">
-            <div><img src="/img/logo.png" alt="Logo"></div>
-            <span><a href="/index.html">Home</a></span>
-            <span><a href="/html/about.html">Nosotros</a></span>
-            <span><a href="/html/services.html">Servicios</a></span>
-            <span><a href="/html/contact.html">Contacto</a></span>
+            <div><img src="img/logo.png" alt="Logo"></div>
+            <span><a href="index.php">Home</a></span>
+            <span><a href="html/about.php">Nosotros</a></span>
+            <span><a href="html/services.php">Servicios</a></span>
+            <span><a href="html/contact.php">Contacto</a></span>
         </nav>
     </header>
 
-    <div class="Contenido-Services">
-    <div class="img1">
-        <a href="https://www.templatemonster.com/es/product-mockups/" target="_blank"><img src="/img/img-servicios-1.jpg" alt="Servicio uno"></a>
-        <p class="txt1">Diseñamos su portal de ventas para potencializar su negocio en linea</p>
-    </div>
-    <div class="img2">
-        <a href="https://btemplates.com/" target="_blank"><img src="/img/img-servicios-2.png" alt="Servicio uno"></a>
-        <p class="txt2">Creamos tu blog personal para que expreses tus grandes ideas</p>
-    </div>
-    <div class="img3">
-       <a href="https://themeforest.net/search/academica" target="_blank"><img src="/img/img-servicios-3.jpg" alt="Servicio uno"></a>
-        <p class="txt3">Administra tu comunidad universitaria con un portal academico</p>
-    </div>
-    <div class="img4">
-        <a href="https://www.1and1.mx/templates" target="_blank"><img src="/img/img-servicios-4.jpg" alt="Servicio uno"></a>
-        <p class="txt4">Necesitas un aplicación para tu empresa, Nosotros la creamos</p>
-    </div>
+    <div class="Contenido">
+        <span><img src="<?php echo $values[0]["img"]; ?>" alt="Imagen Home"></span>
+        <div class="Div-Text">
+            <h1><?php echo $values[0]["title"]; ?></h1>
+            <p><?php echo $values[0]["description"]; ?></p>
+        </div>
     </div>
 
     <footer>
@@ -49,28 +44,28 @@
             <p>Conocenos</p>
             <ul>
                 <div>
-                    <a href="/index.html">
+                    <a href="index.php">
                         <span id="home" class="fas fa-home"></span>
                         <li>Home</li>
                     </a>
                 </div>
                 
                 <div>
-                    <a href="/html/about.html">
+                    <a href="html/about.php">
                         <span id="nosotros" class="fas fa-users"></span>
                         <li>Nosotros</li>
                     </a>
                 </div>
                 
                 <div>
-                    <a href="/html/services.html">
+                    <a href="html/services.php">
                         <span id="servicios" class="fas fa-cogs"></span>
                         <li>Servicios</li>
                 </a>
                 </div>
                 
                 <div>
-                    <a href="/html/contact.html">
+                    <a href="html/contact.php">
                         <span id="desarrolladores" class="fas fa-code"></span>
                         <li>Desarrolladores</li>
                 </a>

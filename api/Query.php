@@ -51,14 +51,14 @@ class Query{
 
     public function excecuteQuery($sql)
     {
-        var_dump($sql);
         $result = $this->connection->conn->query($sql);
         if ($result == true) {
-            $data = array();
-            while($row = $result->fetch_array(MYSQLI_NUM)) {
-                array_push($data,$row);
-              }
-            return $data ;
+            // $data = array();
+            // while($row = $result->fetch_all(MYSQLI_BOTH)) {
+            //     array_push($data,$row);
+            //   }
+            // return $data ;
+            return $result->fetch_all(MYSQLI_ASSOC);
         } else {
             return null;
         }
