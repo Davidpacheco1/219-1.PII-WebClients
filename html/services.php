@@ -31,24 +31,11 @@ $values =  $sections->getSectionByLocation("service");
 
     <div class="Contenido-Services">
         <?php for($i = 0; $i < count($values); $i++){?>
-            <div class="<?php if ($i % 2 == 0) echo "img1"; else echo "img2";?>">
+            <div class="<?php echo "divimg";?>">
                 <a href="https://www.templatemonster.com/es/product-mockups/" target="_blank"><img src="<?php echo $values[$i]["img"]; ?>" alt="Servicio uno"></a>
-                <p class="<?php if ($i % 2 == 0) echo "txt1"; else echo "txt2";?>"><?php echo $values[$i]["description"]; ?></p>
+                <p><?php echo $values[$i]["description"]; ?></p>
             </div>
         <?php }?>
-    
-    <!-- <div class="img2">
-        <a href="https://btemplates.com/" target="_blank"><img src="../img/img-servicios-2.png" alt="Servicio uno"></a>
-        <p class="txt2">Creamos tu blog personal para que expreses tus grandes ideas</p>
-    </div>
-    <div class="img3">
-       <a href="https://themeforest.net/search/academica" target="_blank"><img src="../img/img-servicios-3.jpg" alt="Servicio uno"></a>
-        <p class="txt3">Administra tu comunidad universitaria con un portal academico</p>
-    </div>
-    <div class="img4">
-        <a href="https://www.1and1.mx/templates" target="_blank"><img src="../img/img-servicios-4.jpg" alt="Servicio uno"></a>
-        <p class="txt4">Necesitas un aplicación para tu empresa, Nosotros la creamos</p>
-    </div> -->
     </div>
 
     <footer>
@@ -131,6 +118,7 @@ $values =  $sections->getSectionByLocation("service");
                 
             </ul>
         </div>
+        <p class="elaboro">Elaborado por WebClients Developers &#169; 2018</p>
     </footer>
 
 </body>

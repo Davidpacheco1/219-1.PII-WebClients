@@ -123,6 +123,7 @@ $values =  $sections->getSectionByLocation("about");
 
             </ul>
         </div>
+        <p class="elaboro">Elaborado por WebClients Developers &#169; 2018</p>
     </footer>
 
 </body>
