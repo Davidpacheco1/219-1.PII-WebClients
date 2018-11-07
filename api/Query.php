@@ -11,20 +11,27 @@ class Query{
         if(count($selectColumnsNames) != 0){
             $columnsNames = $this->getColumnsNamesFormArray($selectColumnsNames);
         }
-        // $whereNames =  "(".$this->getColumnsNamesFormArray($whereColumnName).")";
-        // $whereValues =  "(".$this->getColumnsNamesFormArray($whereValue).")";
         $where = $this->getWhereString($whereColumnName, $whereValues);
         $sql = "SELECT ".$columnsNames." FROM $tableName ".$where;
         return $this->excecuteQuery($sql);
     }
+    public function insert($tableName,$colums, $values){
+        $sql = "INSERT INTO ".$tableName." ".$colums." VALUES ".$values;
+        return $this->excecuteQuery($sql);
+    }
+    public function delete($tableName,$whereColumnName, $whereValues){
+        $where = $this->getWhereString($whereColumnName, $whereValues);
+        $sql = "DELETE FROM $tableName ".$where;
+        return $this->excecuteQuery($sql);
+    }
     public function update($tableName,$updateColumnsNames, $valueColumns,$whereColumnName, $whereValues){
         $values = "";
-        for($i = 0; count($updateColumnsNames) > 0; $i++){
-            $values = $values. $updateColumnsNames[$i]." = ". $valueColumns[$i]. ",";
+        for($i = 0; $i < count($updateColumnsNames); $i++){
+            $values = $values. $updateColumnsNames[$i]." = '". $valueColumns[$i]. "',";
         }
         $values = substr($values, 0, -1);
         $where = $this->getWhereString($whereColumnName, $whereValues);
-        $sql = "UPDATE $tableName SET ".$where;
+        $sql = "UPDATE $tableName SET ".$values." ".$where;
         return $this->excecuteQuery($sql);
     }
 
@@ -53,11 +60,9 @@ class Query{
     {
         $result = $this->connection->conn->query($sql);
         if ($result == true) {
-            // $data = array();
-            // while($row = $result->fetch_all(MYSQLI_BOTH)) {
-            //     array_push($data,$row);
-            //   }
-            // return $data ;
+            if(is_bool($result)){
+                return true;
+            }
             return $result->fetch_all(MYSQLI_ASSOC);
         } else {
             return null;

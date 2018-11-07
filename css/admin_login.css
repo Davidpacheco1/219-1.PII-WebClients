@@ -4,7 +4,7 @@
     width: 100%;
     height: 530px;
     font-family: 'Montserrat', sans-serif;
-    background-image: url(/img/img-contacto-fondo.jpg);
+    background-image: url(../img/img-contacto-fondo.jpg);
 }
 
 /*Formulario*/
@@ -142,8 +142,9 @@ form.form-contact textarea{
     max-height: 100px;
 }
 
-form.form-contact input[type="button"]{
+form.form-contact button[type="submit"]{
     width: 180px;
+    height: 30px;
     background: #1A7BBC;
     padding: 10PX;
     border: none;
@@ -157,7 +158,7 @@ form.form-contact input[type="button"]{
     cursor: pointer;
 }
 
-form.form-contact input[type="button"]:hover{
+form.form-contact button[type="sumbit"]:hover{
     background: #0B5587;
 }
 

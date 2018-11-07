@@ -142,21 +142,20 @@ form.form-contact textarea{
     max-height: 100px;
 }
 
-form.form-contact input[type="button"]{
+form.form-contact button[type="submit"]{
     width: 180px;
     background: #1A7BBC;
     padding: 10PX;
     border: none;
     border-radius: 25px;
-    
+    height: 30px;
     align-self: flex-end;
-    
     color: #fff;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
 }
 
-form.form-contact input[type="button"]:hover{
+form.form-contact button[type="submit"]:hover{
     background: #0B5587;
 }

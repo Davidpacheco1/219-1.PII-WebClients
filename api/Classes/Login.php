@@ -1,6 +1,6 @@
 <?php
-require_once('Objects/Admin.php'); 
-require_once('Query.php'); 
+require_once(realpath(dirname(__FILE__) . '/..') .'/Classes/Admin.php'); 
+require_once(realpath(dirname(__FILE__) . '/..') .'/Query.php'); 
 class Login{
     public $admin;
     public function Login($admin){

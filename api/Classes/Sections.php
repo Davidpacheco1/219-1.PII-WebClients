@@ -17,6 +17,16 @@ class Sections
         $response = $query->update('sections',['location','img','description', 'title'],[$location, $img, $description,$title],['id'],[$id]);
         return $response;
     }
+    public function insert($location, $img, $description,$title){
+        $query = new Query();
+        $response = $query->insert('sections',"(location,img,description, title)","('$location', '$img', '$description', '$title')");
+        return $response;
+    }
+    public function delete($id){
+        $query = new Query();
+        $response = $query->delete('sections',['id'],[$id]);
+        return $response;
+    }
 }
 
 

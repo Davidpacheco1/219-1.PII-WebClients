@@ -12,7 +12,7 @@
 
 </head>
 <?php
-require_once('api/Objects/Sections.php');
+require_once('api/Classes/Sections.php');
 $sections = new Sections();
 $values =  $sections->getSectionByLocation("home");
 ?>
@@ -23,11 +23,12 @@ $values =  $sections->getSectionByLocation("home");
     <header>
     
         <nav class="barra-menu">
-            <div><img src="img/logo.png" alt="Logo"></div>
+            <div><img src="img/logo.png" alt="Logo"/></div>
             <span><a href="index.php">Home</a></span>
             <span><a href="html/about.php">Nosotros</a></span>
             <span><a href="html/services.php">Servicios</a></span>
             <span><a href="html/contact.php">Contacto</a></span>
+            <span><a href="html/admin_index.php">Admin</a></span>
         </nav>
     </header>
 

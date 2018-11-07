@@ -16,11 +16,12 @@
 .divimg img {
     position: absolute;
     width: 49.5%;
-    height: 315px;
     border-radius: 15px 15px 15px 15px;
     -moz-border-radius: 15px 15px 15px 15px;
     -webkit-border-radius: 15px 15px 15px 15px;
     border: 2px solid #fff;
+    height: 320px;
+    object-fit: cover;
 }
 
 .Contenido-Services p {

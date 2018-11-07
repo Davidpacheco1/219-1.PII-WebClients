@@ -13,22 +13,17 @@
 
 </head>
 <?php
-require_once('../api/Objects/Sections.php');
+require_once('../api/Classes/Sections.php');
 $sections = new Sections();
 $values =  $sections->getSectionByLocation("about");
+$header =  $sections->getSectionByLocation("header");
+$footer =  $sections->getSectionByLocation("footer");
 ?>
+
 <body>
-
     <header>
-        <nav class="barra-menu">
-            <div><img src="../img/logo.png" alt="Logo"></div>
-            <span><a href="../index.php">Home</a></span>
-            <span><a href="about.php">Nosotros</a></span>
-            <span><a href="services.php">Servicios</a></span>
-            <span><a href="contact.php">Contacto</a></span>
-        </nav>
+        <?php echo $header[0]["description"];?>
     </header>
-
     <div class="contenido-about">
         <div class="img">
             <img src="<?php echo $values[0]["img"]; ?>" alt="Imagen Home">
@@ -44,86 +39,7 @@ $values =  $sections->getSectionByLocation("about");
     </div>
 
     <footer>
-        <div class="conocenos">
-            <p>Conocenos</p>
-            <ul>
-                <div>
-                    <a href="/index.php">
-                        <span id="home" class="fas fa-home"></span>
-                        <li>Home</li>
-                    </a>
-                </div>
-
-                <div>
-                    <a href="/html/about.php">
-                        <span id="nosotros" class="fas fa-users"></span>
-                        <li>Nosotros</li>
-                    </a>
-                </div>
-
-                <div>
-                    <a href="/html/services.php">
-                        <span id="servicios" class="fas fa-cogs"></span>
-                        <li>Servicios</li>
-                    </a>
-                </div>
-
-                <div>
-                    <a href="/html/contact.php">
-                        <span id="desarrolladores" class="fas fa-code"></span>
-                        <li>Desarrolladores</li>
-                    </a>
-                </div>
-
-            </ul>
-        </div>
-        <div class="contactanos">
-            <p>Contactanos</p>
-            <ul>
-                <span id="correo" class="far fa-envelope"></span>
-                <li>desarrollo@responsive.com.mx</li>
-                <span id="phone" class="fal fa-phone"></span>
-                <li>(33) 36-15-15-85</li>
-                <span id="whatsapp" class="fab fa-whatsapp"></span>
-                <li>33 10 06 20 27</li>
-                <span id="web" class="fas fa-globe-americas"></span>
-                <li>www.webclients.com.mx</li>
-            </ul>
-        </div>
-        <div class="redes">
-            <p>Redes Sociales</p>
-            <ul>
-                <div>
-                    <a href="https://www.youtube.com/watch?v=T5pLF6Hd1D4" target="_blank">
-                        <span id="youtube" class="fab fa-youtube"></span>
-                        <li>Youtube</li>
-                    </a>
-                </div>
-
-                <div>
-                    <a href="https://es-la.facebook.com/" target="_blank">
-                        <span id="facebook" class="fab fa-facebook-square"></span>
-                        <li>Facebook</li>
-                    </a>
-                </div>
-
-                <div>
-                    <a href="https://twitter.com/?lang=es" target="_blank">
-                        <span id="twitter" class="fab fa-twitter-square"></span>
-                        <li>Twitter</li>
-                    </a>
-                </div>
-
-                <div>
-                    <a href="https://www.instagram.com/?hl=es-la" target="_blank">
-                        <span id="instagram" class="fab fa-instagram"></span>
-                        <li>Instagram</li>
-                    </a>
-                </div>
-
-            </ul>
-        </div>
-        <p class="elaboro">Elaborado por WebClients Developers &#169; 2018</p>
+         <?php echo $footer[0]["description"];?>
     </footer>
 
 </body>

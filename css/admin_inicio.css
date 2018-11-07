@@ -4,7 +4,7 @@
     width: 100%;
     height: 630px;
     font-family: 'Montserrat', sans-serif;
-    background-image: url(/img/img-contacto-fondo.jpg);
+    background-image: url(../img/img-contacto-fondo.jpg);
 }
 
 /*Formulario*/
@@ -15,7 +15,7 @@
 
 .form_wrap {
     width: 500px;
-    height: 430px;
+    height: 530px;
     margin: 50px auto;
     display: flex;
     
@@ -70,21 +70,20 @@ form.form-contact textarea{
     max-height: 100px;
 }
 
-form.form-contact input[type="button"]{
+form.form-contact button[type="sumbit"]{
     width: 180px;
+    height: 30px;
     background: #1A7BBC;
     padding: 10PX;
     border: none;
     border-radius: 25px;
-    
     align-self: flex-end;
-    
     color: #fff;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
 }
 
-form.form-contact input[type="button"]:hover{
+form.form-contact button[type="sumbit"]:hover{
     background: #0B5587;
 }

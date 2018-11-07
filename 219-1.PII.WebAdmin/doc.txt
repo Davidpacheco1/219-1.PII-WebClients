@@ -1,7 +1,0 @@
-Project name: WebClients
-Project description: 
-Sitio web de servicio de desarrollo web, donde se explica en 'nosotros' las caracteristicas y miembros del equipo, en 'servicio' lo que se ofrece y 'contacto' un formulario para contactar a los desarrolladores.
-
-Team:
-David Pacheco 
-José Luis Péres
