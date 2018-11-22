@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilos.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <?php
 require_once('api/Classes/Sections.php');
@@ -123,7 +123,13 @@ $values =  $sections->getSectionByLocation("home");
         
         <p class="elaboro">Elaborado por WebClients Developers &#169; 2018</p>
     </footer>
-
+<script>
+$( document ).ready(function() {
+    $( ".Div-Text" ).mouseover(function() {
+        $(".Div-Text").css("background-color", "#1a8cbc");
+    });
+});
+$
+</script>
 </body>
-
 </html>
