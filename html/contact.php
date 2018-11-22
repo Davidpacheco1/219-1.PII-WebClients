@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="../css/contact.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </head>
 <?php
@@ -48,7 +49,7 @@ $commentManager = new CommentManager();
            </section>
        </section>
        
-        <form action="<?php echo $_SERVER['PHP_SELF'];?>" class="form-contact" method="post">
+        <form id="form" action="<?php echo $_SERVER['PHP_SELF'];?>" class="form-contact" method="post">
             <h2>Envia un mensaje</h2>
             <div class="user_info">
                
@@ -72,7 +73,13 @@ $commentManager = new CommentManager();
     <footer>
     <?php echo $footer[0]["description"];?>
     </footer>
-
+<script>
+$( document ).ready(function() {
+    $( "#form" ).submit(function( event ) {
+        alert( "Muchas gracias por comunicarte con nosotros" );
+    });
+});
+</script>
 </body>
 
 </html>
