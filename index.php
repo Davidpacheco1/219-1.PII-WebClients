@@ -128,6 +128,10 @@ $( document ).ready(function() {
     $( ".Div-Text" ).mouseover(function() {
         $(".Div-Text").css("background-color", "#1a8cbc");
     });
+
+    $( ".Div-Text" ).mouseout(function() {
+        $(".Div-Text").css({"background-color": "#1a7bbc"});
+    });
 });
 $
 </script>
