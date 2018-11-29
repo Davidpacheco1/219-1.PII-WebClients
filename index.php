@@ -24,6 +24,8 @@ $values =  $sections->getSectionByLocation("home");
     
         <nav class="barra-menu">
             <div><img src="img/logo.png" alt="Logo"/></div>
+            <p id="waring" hidden>Cuidado la vista no es responsiva.</p>
+
             <span><a href="index.php">Home</a></span>
             <span><a href="html/about.php">Nosotros</a></span>
             <span><a href="html/services.php">Servicios</a></span>
@@ -131,6 +133,10 @@ $( document ).ready(function() {
 
     $( ".Div-Text" ).mouseout(function() {
         $(".Div-Text").css({"background-color": "#1a7bbc"});
+    });
+
+    $( window ).resize(function() {
+        
     });
 });
 $
