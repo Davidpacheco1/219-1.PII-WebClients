@@ -24,7 +24,7 @@ $values =  $sections->getSectionByLocation("home");
     
         <nav class="barra-menu">
             <div><img src="img/logo.png" alt="Logo"/></div>
-            <p id="waring" hidden>Cuidado la vista no es responsiva.</p>
+            <p id="warning" hidden>Cuidado la vista no es responsiva.</p>
 
             <span><a href="index.php">Home</a></span>
             <span><a href="html/about.php">Nosotros</a></span>
@@ -136,7 +136,7 @@ $( document ).ready(function() {
     });
 
     $( window ).resize(function() {
-        
+        $( "#warning" ).show();
     });
 });
 $
