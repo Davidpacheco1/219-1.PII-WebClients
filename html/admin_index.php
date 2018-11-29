@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/admin_estilos.css">
     <link rel="stylesheet" href="../css/admin_login.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </head>
 <?php
@@ -58,7 +59,7 @@ if(isset($_POST['submit'])){
                 <input type="user" id="user" name="name" placeholder="tucorreo@email.com" value="<?php echo $name;?>">
                 
                 <label for="password" >Contraseña *</label>
-                <input type="password" pattern=".{6,}" id="password" name="password" placeholder="Introduce tu Contraseña">
+                <input id="password" type="password" pattern=".{6,}" id="password" name="password" placeholder="Introduce tu Contraseña">
                 <p><?php echo $message;?></p>
                 <button type="submit"  id="submit" name="submit">Iniciar Sesión</button>
             </div>
@@ -70,6 +71,12 @@ if(isset($_POST['submit'])){
     <footer>
         <p class="elaboro">Elaborado por WebClients Developers &#169; 2018</p>
     </footer>
+
+    <script>
+        $("#password").bind("paste", function(e){
+            e.preventDefault();
+        });
+    </script>
 
 </body>
 
