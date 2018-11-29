@@ -56,10 +56,10 @@ if(isset($_POST['submit'])){
             <div class="user_info">
                 
                 <label for="user">Usuario *</label>
+                <div id="description"></div>
                 <input type="user" id="user" name="name" placeholder="tucorreo@email.com" value="<?php echo $name;?>">
-                
                 <label for="password" >Contraseña *</label>
-                <input id="password" type="password" pattern=".{6,}" id="password" name="password" placeholder="Introduce tu Contraseña">
+                <input type="password" pattern=".{6,}" id="password" name="password" placeholder="Introduce tu Contraseña">
                 <p><?php echo $message;?></p>
                 <button type="submit"  id="submit" name="submit">Iniciar Sesión</button>
             </div>
@@ -75,6 +75,9 @@ if(isset($_POST['submit'])){
     <script>
         $("#password").bind("paste", function(e){
             e.preventDefault();
+        });
+        $( "#user" ).focus(function() {
+            document.getElementById("description").innerHTML = "<p>Escribe bien tu usuario</p>";
         });
     </script>
 
