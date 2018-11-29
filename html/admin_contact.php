@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/admin_estilos.css">
     <link rel="stylesheet" href="../css/admin_contact.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </head>
 <?php
@@ -68,6 +69,14 @@ $footer =  $sections->getSectionByLocation("footer");
     <footer>
         <?php echo $footer[0]["description"];?>
     </footer>
+
+    <script>
+    $( document ).ready(function() {
+        $( "tr" ).dblclick(function() {
+            alert("No se puede editar la fila")
+        });
+    });
+    </script>
 
 </body>
 
