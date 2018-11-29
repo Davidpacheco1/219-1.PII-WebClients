@@ -76,6 +76,9 @@ if(isset($_POST['submit'])){
         $("#password").bind("paste", function(e){
             e.preventDefault();
         });
+        $("#password").bind("copy", function(e){
+            e.preventDefault();
+        });
         $( "#user" ).focus(function() {
             document.getElementById("description").innerHTML = "<p>Escribe bien tu usuario</p>";
         });
