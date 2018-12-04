@@ -84,6 +84,10 @@ $( document ).ready(function() {
         $("#name").css("color", "#1A7BBC");
     });
     
+    $( "#email" ).select(function( event ) {
+        $("#email").css("font-weight", "bold");
+    });
+    
 });
 </script>
 </body>
