@@ -75,9 +75,15 @@ $commentManager = new CommentManager();
     </footer>
 <script>
 $( document ).ready(function() {
+    
     $( "#form" ).submit(function( event ) {
         alert( "Muchas gracias por comunicarte con nosotros" );
     });
+    
+    $( "#name" ).keypress(function( event ) {
+        $("#name").css("color", "#1A7BBC");
+    });
+    
 });
 </script>
 </body>

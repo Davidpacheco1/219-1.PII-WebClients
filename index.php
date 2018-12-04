@@ -26,7 +26,7 @@ $values =  $sections->getSectionByLocation("home");
             <div><img src="img/logo.png" alt="Logo"/></div>
             <p id="warning" hidden>Cuidado la vista no es responsiva.</p>
 
-            <span><a href="index.php">Home</a></span>
+            <span><a id = "1" href="index.php">Home</a></span>
             <span><a href="html/about.php">Nosotros</a></span>
             <span><a href="html/services.php">Servicios</a></span>
             <span><a href="html/contact.php">Contacto</a></span>
@@ -130,9 +130,20 @@ $( document ).ready(function() {
     $( ".Div-Text" ).mouseover(function() {
         $(".Div-Text").css("background-color", "#1a8cbc");
     });
+    
 
     $( ".Div-Text" ).mouseout(function() {
         $(".Div-Text").css({"background-color": "#1a7bbc"});
+    });
+    
+    $("#1").mousemove(function(){
+        $("#1").css("background-color", "#fff");
+        $("#1").css("color", "#1A7BBC");
+    });
+    
+    $("#1").mouseout(function(){
+        $("#1").css("background-color", "#1A7BBC");
+        $("#1").css("color", "#fff");
     });
 
     $( window ).resize(function() {
