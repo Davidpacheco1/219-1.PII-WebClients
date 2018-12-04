@@ -88,6 +88,12 @@ $( document ).ready(function() {
         $("#email").css("font-weight", "bold");
     });
     
+    $( "#subject" ).mouseup(function( event ) {
+        $("#subject").css("font-weight", "bold");
+        $("#subject").css("font-size", "28px");
+        $("#subject").css("color", "#1A7BBC");
+    });
+    
 });
 </script>
 </body>
