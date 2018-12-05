@@ -168,6 +168,9 @@ $values =  $sections->getSectionByLocation("home");
                 alert("Se perdio la conexión a internet");
             });
 
+            window.addEventListener("online", function(event) {
+                alert("Estas en linea");
+            });
 
         });
         $
