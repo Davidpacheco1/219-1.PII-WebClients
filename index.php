@@ -137,19 +137,17 @@ $values =  $sections->getSectionByLocation("home");
 
 
             $(".Div-Text").mouseout(function() {
-                $(".Div-Text").css({
-                    "background-color": "#1a7bbc"
-                });
+                $(".Div-Text").css({"background-color": "#1a7bbc"});
             });
 
             $("#1").mousemove(function() {
-                $("#1").css("background-color", "#fff");
-                $("#1").css("color", "#1A7BBC");
+                $("#1").css({"background-color":"#fff"});
+                $("#1").css({"color":"#1A7BBC"});
             });
 
             $("#1").mouseout(function() {
-                $("#1").css("background-color", "#1A7BBC");
-                $("#1").css("color", "#fff");
+                $("#1").css({"background-color":"#1A7BBC"});
+                $("#1").css({"color":"#fff"});
             });
 
             $(window).resize(function() {

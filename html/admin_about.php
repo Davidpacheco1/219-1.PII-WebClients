@@ -27,6 +27,7 @@ if(isset($_POST['submit'])){
     $values =  $sections->getSectionByLocation("about");
 }
 ?>
+
 <body>
 
     <header>
@@ -49,13 +50,13 @@ if(isset($_POST['submit'])){
                 <h2>Contenido Nosotros</h2>
                 <div class="user_info">
 
-                   
-                   <label for="name">Cambiar el titulo</label>
-                    <input type="text" id="title" name="title" placeholder="Escriba el titulo" value="<?php echo $values[0]["title"]; ?>">
+
+                    <label id="1" for="name">Cambiar el titulo</label>
+                    <input type="text" onchange="style.backgroundColor='red';" id="title" name="title" placeholder="Escriba el titulo" value="<?php echo $values[0][" title"]; ?>">
                     <label for="name">Cambiar la url Imagen</label>
-                    <input type="text" id="file" name="img" placeholder="Escriba el link de la imagen" value="<?php echo $values[0]["img"]; ?>">
+                    <input type="text" id="file" name="img" placeholder="Escriba el link de la imagen" value="<?php echo $values[0][" img"]; ?>">
                     <label for="text">Cambia la descripcion</label>
-                    <textarea id="text" name="text" placeholder="Escriba un nuevo texto" ><?php echo $values[0]["description"]; ?></textarea>
+                    <textarea id="text" name="text" placeholder="Escriba un nuevo texto"><?php echo $values[0]["description"]; ?></textarea>
                     <button type="submit" id="submit" name="submit">Guardar</button>
                 </div>
             </form>
@@ -67,7 +68,14 @@ if(isset($_POST['submit'])){
     <footer>
         <?php echo $footer[0]["description"];?>
     </footer>
+    <script>
+        $(document).ready(function() {
+            $("#title").onkeyup(function(event) {
+                alert(funciona);
+            });
+        });
 
+    </script>
 </body>
 
 </html>
