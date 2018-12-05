@@ -41,7 +41,6 @@ $footer =  $sections->getSectionByLocation("footer");
     <footer>
          <?php echo $footer[0]["description"];?>
     </footer>
-
 </body>
 
 </html>

@@ -21,12 +21,12 @@ $values =  $sections->getSectionByLocation("home");
 <body>
 
     <header>
-    
+
         <nav class="barra-menu">
-            <div><img src="img/logo.png" alt="Logo"/></div>
+            <div><img src="img/logo.png" alt="Logo" /></div>
             <p id="warning" hidden>Cuidado la vista no es responsiva.</p>
 
-            <span><a id = "1" href="index.php">Home</a></span>
+            <span><a id="1" href="index.php">Home</a></span>
             <span><a href="html/about.php">Nosotros</a></span>
             <span><a href="html/services.php">Servicios</a></span>
             <span><a href="html/contact.php">Contacto</a></span>
@@ -35,10 +35,14 @@ $values =  $sections->getSectionByLocation("home");
     </header>
 
     <div class="Contenido">
-        <span><img src="<?php echo $values[0]["img"]; ?>" alt="Imagen Home"></span>
+        <span><img src="<?php echo $values[0][" img"]; ?>" alt="Imagen Home"></span>
         <div class="Div-Text">
-            <h1><?php echo $values[0]["title"]; ?></h1>
-            <p><?php echo $values[0]["description"]; ?></p>
+            <h1>
+                <?php echo $values[0]["title"]; ?>
+            </h1>
+            <p>
+                <?php echo $values[0]["description"]; ?>
+            </p>
         </div>
     </div>
 
@@ -52,28 +56,28 @@ $values =  $sections->getSectionByLocation("home");
                         <li>Home</li>
                     </a>
                 </div>
-                
+
                 <div>
                     <a href="html/about.php">
                         <span id="nosotros" class="fas fa-users"></span>
                         <li>Nosotros</li>
                     </a>
                 </div>
-                
+
                 <div>
                     <a href="html/services.php">
                         <span id="servicios" class="fas fa-cogs"></span>
                         <li>Servicios</li>
-                </a>
+                    </a>
                 </div>
-                
+
                 <div>
                     <a href="html/contact.php">
                         <span id="desarrolladores" class="fas fa-code"></span>
                         <li>Desarrolladores</li>
-                </a>
+                    </a>
                 </div>
-                
+
             </ul>
         </div>
         <div class="contactanos">
@@ -98,69 +102,77 @@ $values =  $sections->getSectionByLocation("home");
                         <li>Youtube</li>
                     </a>
                 </div>
-                
+
                 <div>
                     <a href="https://es-la.facebook.com/" target="_blank">
                         <span id="facebook" class="fab fa-facebook-square"></span>
                         <li>Facebook</li>
                     </a>
                 </div>
-                
+
                 <div>
                     <a href="https://twitter.com/?lang=es" target="_blank">
                         <span id="twitter" class="fab fa-twitter-square"></span>
                         <li>Twitter</li>
-                </a>
+                    </a>
                 </div>
-                
+
                 <div>
                     <a href="https://www.instagram.com/?hl=es-la" target="_blank">
                         <span id="instagram" class="fab fa-instagram"></span>
                         <li>Instagram</li>
-                </a>
+                    </a>
                 </div>
-                
+
             </ul>
         </div>
-        
+
         <p class="elaboro">Elaborado por WebClients Developers &#169; 2018</p>
     </footer>
-<script>
-$( document ).ready(function() {
-    $( ".Div-Text" ).mouseover(function() {
-        $(".Div-Text").css("background-color", "#1a8cbc");
-    });
-    
+    <script>
+        $(document).ready(function() {
+            $(".Div-Text").mouseover(function() {
+                $(".Div-Text").css("background-color", "#1a8cbc");
+            });
 
-    $( ".Div-Text" ).mouseout(function() {
-        $(".Div-Text").css({"background-color": "#1a7bbc"});
-    });
-    
-    $("#1").mousemove(function(){
-        $("#1").css("background-color", "#fff");
-        $("#1").css("color", "#1A7BBC");
-    });
-    
-    $("#1").mouseout(function(){
-        $("#1").css("background-color", "#1A7BBC");
-        $("#1").css("color", "#fff");
-    });
 
-    $( window ).resize(function() {
-        $( "#warning" ).show();
-    });
-    
-    window.addEventListener("load", function(event) {
-    alert("La Página Web se Cargo Correctamente");
-    });
-    
-    window.addEventListener("dragstart", function(event) {
-    alert("No puede mover los elementos");
-    });
-    
-    
-});
-$
-</script>
+            $(".Div-Text").mouseout(function() {
+                $(".Div-Text").css({
+                    "background-color": "#1a7bbc"
+                });
+            });
+
+            $("#1").mousemove(function() {
+                $("#1").css("background-color", "#fff");
+                $("#1").css("color", "#1A7BBC");
+            });
+
+            $("#1").mouseout(function() {
+                $("#1").css("background-color", "#1A7BBC");
+                $("#1").css("color", "#fff");
+            });
+
+            $(window).resize(function() {
+                $("#warning").show();
+            });
+
+            window.addEventListener("load", function(event) {
+                alert("La Página Web se Cargo Correctamente");
+            });
+
+            window.addEventListener("dragstart", function(event) {
+                alert("No puede mover los elementos");
+            });
+
+            window.addEventListener("offline", function(event) {
+                alert("Se perdio la conexión a internet");
+            });
+
+
+        });
+        $
+
+    </script>
 </body>
+
 </html>
