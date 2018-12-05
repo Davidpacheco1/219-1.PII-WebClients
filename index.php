@@ -149,6 +149,14 @@ $( document ).ready(function() {
     $( window ).resize(function() {
         $( "#warning" ).show();
     });
+    
+    window.addEventListener("load", function(event) {
+    alert("La Página Web se Cargo Correctamente");
+    });
+    
+
+    
+    
 });
 $
 </script>
