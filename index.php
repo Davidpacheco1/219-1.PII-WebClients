@@ -154,7 +154,9 @@ $( document ).ready(function() {
     alert("La Página Web se Cargo Correctamente");
     });
     
-
+    window.addEventListener("dragstart", function(event) {
+    alert("No puede mover los elementos");
+    });
     
     
 });
